@@ -1,0 +1,15 @@
+.active-link{
+  background-color:#ddf;
+}
+
+.nav {
+  padding-bottom:20px;
+}
+
+.nav > span.link{
+  padding-right:10px;
+}
+
+.icon-button-right{
+  padding-left:10px;
+}

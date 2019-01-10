@@ -1,0 +1,25 @@
+<form [formGroup]="signupForm" (ngSubmit)="onSignup()">
+  <p>To sign up as a candidate, please provide your name and attach your CV:</p>
+  <div>
+    <mat-form-field>
+      <input matInput placeholder="First Name" formControlName='firstName'>
+      <mat-error>Please enter your first name</mat-error>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <input matInput placeholder="Last Name" formControlName='lastName'>
+      <mat-error>Please enter your last name</mat-error>
+    </mat-form-field>
+  </div>
+  <div>
+    <input hidden type="file" #imgFileInput formControlName="cv" (change)="getFile($event)" />
+    <button mat-raised-button (click)="imgFileInput.click()">Add CV
+      <mat-icon class="icon-button-right">attach_file</mat-icon>
+    </button>
+    <mat-error *ngIf="submitted && !signupForm.controls['cv'].valid">Please select a file</mat-error>
+  </div>
+  <div class="signup-button">
+    <button mat-raised-button color="primary" type="submit">Sign Up</button>
+  </div>
+</form>

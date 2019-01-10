@@ -1,0 +1,12 @@
+.candidate-table{
+  width:100%;
+  max-width:600px;
+}
+
+.mat-column-actions{
+  width:170px;
+}
+
+.mat-column-actions.mat-header-cell{
+  padding-left:15px;
+}
